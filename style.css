@@ -16,7 +16,7 @@ body {
 }
 
 h1 {
-	font-family: Georgia, serif;
+	font-family: "Helvetica Neue", Arial, sans-serif;
   font-weight: bold;
 	text-align: center;
 	color: var(--text-color-low);
