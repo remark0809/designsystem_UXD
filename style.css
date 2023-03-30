@@ -32,6 +32,12 @@ p {
   font-weight: bold;
 }
 
+.icon {
+	display: inline-block;
+	margin-right: 10px; /* 调整图标和标题之间的间距 */
+	vertical-align: middle; /* 让图标和标题垂直居中 */
+  }
+
 
 .container {
 	margin: 20px auto;
