@@ -12,6 +12,9 @@ const saturationDecRightInput = document.getElementById('saturation-dec-right');
 const generateBtn = document.getElementById('generate-btn');
 const colorPalette = document.getElementById('color-palette');
 
+const lightHueRange = document.getElementById("light-hue-range");
+const darkHueRange = document.getElementById("dark-hue-range");
+
 
 
 
@@ -30,14 +33,22 @@ saturationIncLeftInput.addEventListener('input', function() {
 	updateValueDisplay(saturationIncLeftInput, document.getElementById('saturation-inc-left-value'));
 });
 
+saturationIncLeftInput.addEventListener('input', function() {
+	updateValueDisplay(saturationIncLeftInput, document.getElementById('saturation-inc-left-value'));
+});
 
 
 lightnessIncRightInput.addEventListener('input', function() {
 	updateValueDisplay(lightnessIncRightInput, document.getElementById('lightness-inc-right-value'));
 });
 
+lightHueRange.addEventListener('input', function() {
+	updateValueDisplay(lightHueRange, document.getElementById('light-hue-range-value'));
+});
 
-
+darkHueRange.addEventListener('input', function() {
+	updateValueDisplay(darkHueRange, document.getElementById('dark-hue-range-value'));
+});
 
 
 saturationDecRightInput.addEventListener('input', function() {
@@ -53,6 +64,9 @@ const lightnessDecLeft = lightnessDecLeftInput.valueAsNumber;
 const saturationIncLeft = saturationIncLeftInput.valueAsNumber;
 const lightnessIncRight = lightnessIncRightInput.valueAsNumber;
 const saturationDecRight = saturationDecRightInput.valueAsNumber;
+const lightHue = lightHueRange.valueAsNumber;
+const darkHue = darkHueRange.valueAsNumber;
+
 // 清空之前的调色板
 colorPalette.innerHTML = '';
 
@@ -63,28 +77,34 @@ for (let i = 0; i < numColors; i++) {
 	// 计算颜色的亮度和饱和度
 	let lightness = baseColorHSB.v;
 	let saturation = baseColorHSB.s;
+	let hue = baseColorHSB.h;
 
 	if (i === 0) {
 		// 将第1个颜色变成左边数过来第4个颜色
 		lightness = Math.max(baseColorHSB.v - (1 + 3)*lightnessDecLeft, 0);
 		saturation = Math.min(baseColorHSB.s + (1 + 3)*saturationIncLeft, 1);
+		hue = baseColorHSB.h - (1 + 3) * (darkHue);
 	  } else if (i === 1) {
 		// 第2个颜色保持不变
 		lightness = Math.max(baseColorHSB.v - (1 + 2)*lightnessDecLeft, 0);
 		saturation = Math.min(baseColorHSB.s + (1 + 2)*saturationIncLeft, 1);
+		hue = baseColorHSB.h - (1 + 2) * (darkHue);
 	  } else if (i === 2) {
 		// 将第3个颜色变成左边数过来第1个颜色
 		lightness = Math.max(baseColorHSB.v - (1 + 1)*lightnessDecLeft, 0);
 		saturation = Math.min(baseColorHSB.s + (1 + 1)*saturationIncLeft, 1);
+		hue = baseColorHSB.h - (1 + 1) * (darkHue);
 	  }else if (i === 3) {
 		// 将第4个颜色变成左边数过来第1个颜色
 		lightness = Math.max(baseColorHSB.v - (1 + 0)*lightnessDecLeft, 0);
 		saturation = Math.min(baseColorHSB.s + (1 + 0)*saturationIncLeft, 1);
+		hue = baseColorHSB.h - (1 + 0) * (darkHue);
 	  }
 	  else if (i > 4) {
 		// 将后三个颜色变亮
 		lightness = Math.min(baseColorHSB.v + (i - 3)*lightnessIncRight , 1);
 		saturation = Math.max(baseColorHSB.s - (i - 3)*saturationDecRight, 0);
+		hue = baseColorHSB.h + (i - 3) * (lightHue);
 	} else {
 		// 第四个颜色是基础颜色
 		lightness = baseColorHSB.v;
@@ -92,7 +112,7 @@ for (let i = 0; i < numColors; i++) {
 	}
 
 	// 创建一个颜色框并添加到调色板中
-	const color = tinycolor({ h: baseColorHSB.h, s: saturation, v: lightness });
+	const color = tinycolor({ h: hue, s: saturation, v: lightness });
 	const colorBox = document.createElement('div');
 	colorBox.className = 'color-box';
 	colorBox.style.backgroundColor = color.toHexString();
@@ -171,6 +191,10 @@ function updateColorBoxes() {
   }
 
 
+  //输出到控制台
+console.log(hue);
 	
 }
 });
+
+
