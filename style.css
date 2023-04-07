@@ -1,9 +1,10 @@
 :root {
 	--bg-color: #e9e9e9;
 	--container-color:#ffffffc2;
-	--brand-color: #008ea6;
+	--brand-color: #4ab1ff;
 	--text-color-max:#ffffff;
 	--text-color-high: #000000d6;
+	--text-color-mid: #0000007e;
 	--text-color-low:#00000022;
   }
   
@@ -20,6 +21,22 @@ h1 {
   font-weight: bold;
 	text-align: center;
 	color: var(--text-color-low);
+}
+
+h2	{
+	font-family: "Helvetica Neue", Arial, sans-serif;
+  	font-weight: bold;
+	text-align: left;
+	line-height: 120%;
+	margin: 0rem;
+	color: var(--text-color-mid);
+}
+
+b1{
+	text-align: left;
+	line-height: 120%;
+	margin: 0rem;
+	color: var(--text-color-mid);
 }
 
 p {
@@ -40,32 +57,85 @@ p {
 
 
 .container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
 	margin: 20px auto;
 	width: 100%;
 	max-width: 800px;
 	background-color: var(--container-color);
-	padding: 20px;
-	border-radius: 10px;
+	padding: 2rem;
+	gap:1.5rem;
+	border-radius: 	0.5rem;
 	box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.10);
 }
 
-.containerXS {
+
+.containerS{
 	display: flex;
 	flex-direction: row;
+	justify-content: space-between;
 	align-items: flex-start;
-	gap: 2rem;
+	gap:2rem;
+	padding:0rem;
+
+	background-color: var(none);
+}
+
+.containerS-tate{
+
+	border-radius: 	0.5rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+
+	/*flex: none;*/
+	order: 0;
+	align-self: stretch;
+	flex-grow: 1;
+	gap:1rem;
+	padding:1.5rem 1.5rem 2rem;
+
+	background-color: var(--bg-color);
+
+}
+
+
+
+.containerXS {
+	display: flex;
+	flex-grow: 1;
+	flex-direction: row;
+	align-items: center;
+	gap: 1rem;
+
+	flex: none;
+	order: 0;
+	align-self: stretch;
+	flex-grow: 1;
   }
 
 .containerXXS{
-	display: flex;
+	/* display: flex; */
 	flex: none;
 	order: 0;
 	flex-grow: 1;
 	align-items: center;
 	align-self: stretch;
-	text-align: center;
+	text-align: left;
 
   }
+
+.containerXXS-fixed{
+	display: flex;
+	order: 0;
+	width: 2rem;
+	align-items: center;
+	align-self: stretch;
+	text-align: center;
+}
 
 
 .elementFill {
@@ -95,27 +165,31 @@ p {
 
 label {
 	display: inline-block;
-	margin-bottom: 10px;
+	margin-bottom: 0.5rem;
+	color: var(--text-color-mid);
 }
 
 input[type=color], input[type=number], input[type=range] {
-	margin-left: 10px;
+	height: 2rem;
+	
+	margin-left: 0px;
 }
 
 input[type="range"] {
 	display: block;
+	justify-content: center;
 	width: 100%;
-	margin: 0;
+	margin: 0rem;
 	padding: 0;
   }
   
   input[type="range"]::-webkit-slider-thumb {
 	-webkit-appearance: none;
 	appearance: none;
-	width: 16px;
-	height: 16px;
+	width: 2rem;
+	height: 2rem;
 	border-radius: 50%;
-	background-color: #00ff00; /* 将颜色更改为绿色 */
+	/*background-color: #00ff00; /* 将颜色更改为绿色 */
 	cursor: pointer;
 	border: none;
 	margin-top: -5px;
@@ -148,13 +222,13 @@ input[type="range"] {
 
 button {
 	display: block;
-	margin: 20px auto;
+	margin: 0rem 10rem;
 	padding: 10px 20px;
 	font-size: 1.2em;
 	background-color: var(--brand-color);
 	color: var(--text-color-max);
 	border: none;
-	border-radius: 5px;
+	border-radius: 0.5rem;
 	cursor: pointer;
 }
 
@@ -163,6 +237,7 @@ button {
 	flex-wrap: wrap;
 	margin: 20px auto;
 	max-width: 800px;
+	cursor: pointer;
 }
 
 
@@ -177,6 +252,7 @@ button {
 	justify-content: space-between;
 	max-width: 100%;
 	margin: 10px auto;
+	
   }
   
   .color-box {
@@ -199,6 +275,7 @@ button {
   .color-box:hover {
 	box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.45);
 	transition: box-shadow 0.7s ease-in-out;
+	
   }
   
  
