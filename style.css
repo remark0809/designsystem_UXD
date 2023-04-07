@@ -18,13 +18,15 @@ body {
 
 h1 {
 	font-family: "Helvetica Neue", Arial, sans-serif;
-  font-weight: bold;
+  	font-size: 2rem;
+	font-weight: bold;
 	text-align: center;
 	color: var(--text-color-low);
 }
 
 h2	{
 	font-family: "Helvetica Neue", Arial, sans-serif;
+	font-size: 1.25rem;
   	font-weight: bold;
 	text-align: left;
 	line-height: 120%;
@@ -34,6 +36,7 @@ h2	{
 
 b1{
 	text-align: left;
+	font-size: 0.75rem;
 	line-height: 120%;
 	margin: 0rem;
 	color: var(--text-color-mid);
@@ -165,8 +168,13 @@ p {
 
 label {
 	display: inline-block;
-	margin-bottom: 0.5rem;
+	margin-bottom: 0.1rem;
 	color: var(--text-color-mid);
+	font-size: 0.9rem;
+
+	/*エリアからはみ出した文字を自動で三点リーダー（…）で省略する*/
+	
+
 }
 
 input[type=color], input[type=number], input[type=range] {
@@ -179,25 +187,27 @@ input[type="range"] {
 	display: block;
 	justify-content: center;
 	width: 100%;
+	height: 1rem;
 	margin: 0rem;
-	padding: 0;
+	padding: 0rem;
+	background-color: #cd1d1d;
   }
   
   input[type="range"]::-webkit-slider-thumb {
 	-webkit-appearance: none;
 	appearance: none;
-	width: 2rem;
-	height: 2rem;
+	width: 4;
+	height: 4;
 	border-radius: 50%;
-	/*background-color: #00ff00; /* 将颜色更改为绿色 */
 	cursor: pointer;
+	
 	border: none;
 	margin-top: -5px;
   }
   
   input[type="range"]::-webkit-slider-runnable-track {
 	height: 6px;
-	background-color: #c2c2c2;
+	/*background-color: #c2c2c2;*/
 	border-radius: 6px;
   }
   

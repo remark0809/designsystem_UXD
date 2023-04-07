@@ -37,49 +37,6 @@
 		</div>
 
 		<div class="containerS">
-			<!-- Brightnessブロック -->
-			<div class="containerS-tate">
-				
-				<h2>Brightness:</h2>
-
-				<div class="containerXS">
-					<div class="containerXXS">
-						<label for="light-hue-range">Light Hue Shift: 	</label>
-						<input type="range" class="hue-range" id="light-hue-range" min="-360" max="360" value="2">
-					</div>
-					
-					<div class="containerXXS-fixed">
-						<span id="light-hue-range-value">2</span>
-					</div>
-				</div>
-
-				<div class="containerXS">
-					<div class="containerXXS">
-						<label for="saturation-dec-right">Right Side Saturation Decrement:</label>
-						<input type="range" id="saturation-dec-right" min="0" max="1" step="0.01" value="0.13">
-					</div>
-
-					<div class="containerXXS-fixed">
-						<span id="saturation-dec-right-value">0.13</span>
-					</div>
-				</div>
-				
-
-				<div class="containerXS">
-					<div class="containerXXS">
-						<label for="lightness-inc-right">Right Side Lightness Increment:</label>
-						<input type="range" id="lightness-inc-right" min="0" max="1" step="0.01" value="0.05">
-					</div>
-
-					<div class="containerXXS-fixed">
-						<span id="lightness-inc-right-value">0.05</span>
-					</div>
-				</div>
-
-				
-
-			</div>
-
 			
 			<!-- Darknessブロック -->
 			<div class="containerS-tate">
@@ -87,7 +44,7 @@
 
 					<div class="containerXS">
 						<div class="containerXXS">
-							<label for="dark-hue-range">Dark Hue Shift: </label>
+							<label for="dark-hue-range">Hue Shift: </label>
 							<input type="range" class="hue-range" id="dark-hue-range" min="-360" max="360" value="-2">
 						</div>
 		
@@ -99,7 +56,7 @@
 
 					<div class="containerXS">
 						<div class="containerXXS">
-							<label for="saturation-inc-left">Left Side Saturation Increment:</label>
+							<label for="saturation-inc-left">Saturation +:</label>
 							<input type="range" id="saturation-inc-left" min="0" max="1" step="0.01" value="0.05">
 						</div>
 
@@ -110,7 +67,7 @@
 
 					<div class="containerXS">
 						<div class="containerXXS">
-							<label for="lightness-dec-left">Left Side Lightness Decrement:</label>
+							<label for="lightness-dec-left">Lightness -:</label>
 							<input type="range" id="lightness-dec-left" min="0" max="1" step="0.01" value="0.15">	
 						</div>
 					
@@ -120,6 +77,49 @@
 					</div>
 
 				
+			</div>
+
+			<!-- Brightnessブロック -->
+			<div class="containerS-tate">
+				
+				<h2>Brightness:</h2>
+
+				<div class="containerXS">
+					<div class="containerXXS">
+						<label for="light-hue-range">Hue Shift: 	</label>
+						<input type="range" class="hue-range" id="light-hue-range" min="-360" max="360" value="2">
+					</div>
+					
+					<div class="containerXXS-fixed">
+						<span id="light-hue-range-value">2</span>
+					</div>
+				</div>
+
+				<div class="containerXS">
+					<div class="containerXXS">
+						<label for="saturation-dec-right">Saturation -:</label>
+						<input type="range" id="saturation-dec-right" min="0" max="1" step="0.01" value="0.13">
+					</div>
+
+					<div class="containerXXS-fixed">
+						<span id="saturation-dec-right-value">0.13</span>
+					</div>
+				</div>
+				
+
+				<div class="containerXS">
+					<div class="containerXXS">
+						<label for="lightness-inc-right">Lightness +:</label>
+						<input type="range" id="lightness-inc-right" min="0" max="1" step="0.01" value="0.05">
+					</div>
+
+					<div class="containerXXS-fixed">
+						<span id="lightness-inc-right-value">0.05</span>
+					</div>
+				</div>
+
+				
+
 			</div>
 
 		</div>
