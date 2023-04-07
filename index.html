@@ -6,10 +6,12 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-		<h1>
+	<input value="text-color-low" id="btn-mode" type="checkbox"> ダークモード
+
+	<h1>
 		<span class="icon">
-			<svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-			  <path d="M11.733 23.0492V17.045H16.5156V23.0492C16.5156 23.7096 17.0536 24.25 17.7112 24.25H21.2982C21.9558 24.25 22.4938 23.7096 22.4938 23.0492V14.6433H24.5264C25.0764 14.6433 25.3394 13.9588 24.9209 13.5985L14.9254 4.55621C14.471 4.14793 13.7776 4.14793 13.3232 4.55621L3.32764 13.5985C2.92113 13.9588 3.17221 14.6433 3.72221 14.6433H5.7548V23.0492C5.7548 23.7096 6.29284 24.25 6.95044 24.25H10.5374C11.195 24.25 11.733 23.7096 11.733 23.0492Z" fill="#00000022"/>
+			<svg width="29" height="29" viewBox="0 0 29 29"  xmlns="http://www.w3.org/2000/svg">
+			  <path d="M11.733 23.0492V17.045H16.5156V23.0492C16.5156 23.7096 17.0536 24.25 17.7112 24.25H21.2982C21.9558 24.25 22.4938 23.7096 22.4938 23.0492V14.6433H24.5264C25.0764 14.6433 25.3394 13.9588 24.9209 13.5985L14.9254 4.55621C14.471 4.14793 13.7776 4.14793 13.3232 4.55621L3.32764 13.5985C2.92113 13.9588 3.17221 14.6433 3.72221 14.6433H5.7548V23.0492C5.7548 23.7096 6.29284 24.25 6.95044 24.25H10.5374C11.195 24.25 11.733 23.7096 11.733 23.0492Z"/>
 			</svg>
 		  </span>
 		
@@ -31,7 +33,7 @@
 			
 			<div class="containerXS">				
 				<h2>Number of Colors:</h2>
-				<input type="number" id="num-colors" min="1" max="10" value="10">				
+				<input  type="number" id="num-colors" min="1" max="10" value="10">				
 			</div>
 
 		</div>
@@ -45,11 +47,11 @@
 					<div class="containerXS">
 						<div class="containerXXS">
 							<label for="dark-hue-range">Hue Shift: </label>
-							<input type="range" class="hue-range" id="dark-hue-range" min="-360" max="360" value="-2">
+							<input type="range" id="dark-hue-range" min="-360" max="360" value="-2">
 						</div>
 		
 						<div class="containerXXS-fixed">
-							<span id="dark-hue-range-value">-2</span>
+							<span class="label" id="dark-hue-range-value">-2</span>
 						</div>
 					</div>
 		
@@ -61,7 +63,7 @@
 						</div>
 
 						<div class="containerXXS-fixed">
-							<span id="saturation-inc-left-value">0.05</span>
+							<span class="label" id="saturation-inc-left-value">0.05</span>
 						</div>
 					</div>
 
@@ -72,7 +74,7 @@
 						</div>
 					
 						<div class="containerXXS-fixed">
-							<span id="lightness-dec-left-value">0.15</span>
+							<span class="label" id="lightness-dec-left-value">0.15</span>
 						</div>
 					</div>
 
@@ -91,7 +93,7 @@
 					</div>
 					
 					<div class="containerXXS-fixed">
-						<span id="light-hue-range-value">2</span>
+						<span  class="label" id="light-hue-range-value">2</span>
 					</div>
 				</div>
 
@@ -102,7 +104,7 @@
 					</div>
 
 					<div class="containerXXS-fixed">
-						<span id="saturation-dec-right-value">0.13</span>
+						<span  class="label" id="saturation-dec-right-value">0.13</span>
 					</div>
 				</div>
 				
@@ -114,7 +116,7 @@
 					</div>
 
 					<div class="containerXXS-fixed">
-						<span id="lightness-inc-right-value">0.05</span>
+						<span  class="label" id="lightness-inc-right-value">0.05</span>
 					</div>
 				</div>
 
